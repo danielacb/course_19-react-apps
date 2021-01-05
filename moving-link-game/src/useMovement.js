@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 
 export default function useMovement() {
-  const [x, setX] = useState(0);
-  const [y, setY] = useState(0);
+  const [x, setX] = useState(72);
+  const [y, setY] = useState(18);
   const [direction, setDirection] = useState("down");
 
   useEffect(() => {
@@ -20,10 +20,16 @@ export default function useMovement() {
 
   function move(dir) {
     setDirection(dir);
-    if (dir === "up") setY((y) => y - 20);
-    if (dir === "left") setX((x) => x - 20);
-    if (dir === "down") setY((y) => y + 20);
-    if (dir === "right") setX((x) => x + 20);
+    if (dir === "up") setY((y) => (y >= 20 ? y - 20 : 0));
+    if (dir === "left") setX((x) => (x >= 20 ? x - 20 : 0));
+    if (dir === "down")
+      setY((y) =>
+        y <= window.innerHeight - 52 ? y + 20 : window.innerHeight - 32
+      );
+    if (dir === "right")
+      setX((x) =>
+        x <= window.innerWidth - 50 ? x + 20 : window.innerWidth - 30
+      );
   }
 
   return { x, y, direction, move };
