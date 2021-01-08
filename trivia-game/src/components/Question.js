@@ -11,7 +11,7 @@ function shuffle(array) {
   return array;
 }
 
-export default function Question({ question }) {
+export default function Question({ question, answerQuestion }) {
   const answers = shuffle([
     ...question.incorrect_answers,
     question.correct_answer,
@@ -21,7 +21,11 @@ export default function Question({ question }) {
       <h2 dangerouslySetInnerHTML={{ __html: question.question }} />
 
       {answers.map((answer, index) => (
-        <button key={index}>{answer}</button>
+        <button
+          key={index}
+          onClick={() => answerQuestion(answer)}
+          dangerouslySetInnerHTML={{ __html: answer }}
+        />
       ))}
     </div>
   );

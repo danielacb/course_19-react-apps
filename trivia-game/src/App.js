@@ -8,8 +8,11 @@ import "./App.css";
 export default function App() {
   const [question, setQuestion] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState("any");
+  const [isCorrect, setIsCorrect] = useState(null);
 
   const getQuestion = useCallback(() => {
+    setIsCorrect(null);
+
     let url = "https://opentdb.com/api.php?amount=1";
     if (selectedCategory !== "any") url += `&category=${selectedCategory}`;
 
@@ -22,10 +25,21 @@ export default function App() {
     getQuestion();
   }, [getQuestion, selectedCategory]);
 
+  function handleQuestionAnswer(answer) {
+    setIsCorrect(answer === question.correct_answer);
+    console.log(isCorrect);
+  }
+
   return (
     <div className="app">
       {/* show the result modal ----------------------- */}
-      {/* <ResultModal /> */}
+      {isCorrect !== null && (
+        <ResultModal
+          isCorrect={isCorrect}
+          correctAnswer={question.correct_answer}
+          getQuestion={getQuestion}
+        />
+      )}
 
       {/* question header ----------------------- */}
       <div className="question-header">
@@ -38,12 +52,14 @@ export default function App() {
 
       {/* the question itself ----------------------- */}
       <div className="question-main">
-        {question && <Question question={question} />}
+        {question && (
+          <Question question={question} answerQuestion={handleQuestionAnswer} />
+        )}
       </div>
 
       {/* question footer ----------------------- */}
       <div className="question-footer">
-        <button>
+        <button onClick={getQuestion}>
           Go to next question{" "}
           <span role="img" aria-label="Backhand Index Pointing Right">
             👉
