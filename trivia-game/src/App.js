@@ -26,8 +26,8 @@ export default function App() {
   }, [getQuestion, selectedCategory]);
 
   function handleQuestionAnswer(answer) {
-    setIsCorrect(answer === question.correct_answer);
-    console.log(isCorrect);
+    const isAnswerCorrect = answer === question.correct_answer;
+    setIsCorrect(isAnswerCorrect);
   }
 
   return (
@@ -47,7 +47,7 @@ export default function App() {
           category={selectedCategory}
           chooseCategory={setSelectedCategory}
         />
-        <Scoreboard />
+        <Scoreboard isCorrect={isCorrect} />
       </div>
 
       {/* the question itself ----------------------- */}
