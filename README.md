@@ -1,16 +1,17 @@
 # 20 React Apps
+
 Apps created for the course: makereactapps.com
 
-- [ ] 01 Pomodoro 
-- [ ] 02 Markdown Editor
-- [ ] 03 Highlight Tabs
-- [ ] 04 Paper Rock Scissors
-- [ ] 05 Moving Boxes and Zelda
-- [ ] 06 Infinite Image Gallery
-- [ ] 07 Trivia
-- [ ] 08 Authentication
-- [ ] 09 Web Speech and Timers
-- [ ] 10 Calendar Picker
+- [x] 01 Pomodoro
+- [x] 02 Markdown Editor
+- [x] 03 Highlight Tabs
+- [x] 04 Paper Rock Scissors
+- [x] 05 Moving Boxes and Zelda
+- [x] 06 Infinite Image Gallery
+- [x] 07 Trivia
+- [x] 08 Authentication
+- [x] 09 Web Speech and Timers
+- [x] 10 Calendar Picker
 - [ ] 11 Animated Chat Box
 - [ ] 12 Multi-Step Form
 - [ ] 13 Memory Matching Game
