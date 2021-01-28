@@ -28,6 +28,7 @@ export default function App() {
   const [opened, setOpened] = useState([]);
   const [matched, setMatched] = useState([]);
   const [moves, setMoves] = useState(0);
+  const [endGame, setEndGame] = useState(false);
 
   useEffect(() => {
     if (opened.length < 2) return;
@@ -44,6 +45,12 @@ export default function App() {
     if (opened.length === 2) setTimeout(() => setOpened([]), 1000);
   }, [opened]);
 
+  useEffect(() => {
+    if (matched.length === pokemons.length) {
+      setEndGame(true);
+    }
+  }, [matched]);
+
   function flipCard(index) {
     setMoves((moves) => moves + 1);
     setOpened((opened) => [...opened, index]);
@@ -51,9 +58,7 @@ export default function App() {
 
   return (
     <div className="app">
-      <p>
-        {moves} <strong>moves</strong>
-      </p>
+      <h1>{endGame ? "You Won!" : "Let's Play!"}</h1>
       <div className="cards">
         {doublePokemons.map((pokemon, index) => {
           let isFlipped = false;
@@ -72,6 +77,9 @@ export default function App() {
           );
         })}
       </div>
+      <p>
+        {moves} <strong>moves</strong>
+      </p>
     </div>
   );
 }
