@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Tabs from "./components/Tabs";
+import AddressBar from "./components/AddressBar";
+import "./App.css";
 
-function App() {
+export default function App() {
+  const [browsers, setBrowsers] = useState([
+    "https://danielacb.com/",
+    "https://makereactapps.com/",
+  ]);
+  const [activeBrowser, setActiveBrowser] = useState(0);
+
+  const url = browsers[activeBrowser];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="browser">
+        <Tabs browsers={browsers} active={activeBrowser} />
+
+        <AddressBar />
+
+        <div className="viewport">
+          {url ? (
+            <iframe src={url} frameborder="0" title="viewport" />
+          ) : (
+            <>Open a new Tab!</>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
-
-export default App;
