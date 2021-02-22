@@ -20,6 +20,12 @@ export default function App() {
     setActiveBrowser(newBrowsers.length - 1);
   }
 
+  function updateBrowser(url) {
+    const newBrowsers = [...browsers];
+    newBrowsers[activeBrowser] = url;
+    setBrowsers(newBrowsers);
+  }
+
   const url = browsers[activeBrowser];
 
   return (
@@ -32,7 +38,7 @@ export default function App() {
           add={addBrowser}
         />
 
-        <AddressBar />
+        <AddressBar update={updateBrowser} url={url} />
 
         <div className="viewport">
           {url ? (
