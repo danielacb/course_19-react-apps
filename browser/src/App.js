@@ -1,30 +1,47 @@
-import React, { useState } from "react";
+import React, { useReducer } from "react";
 import Tabs from "./components/Tabs";
 import AddressBar from "./components/AddressBar";
 import "./App.css";
 
 export default function App() {
-  const [browsers, setBrowsers] = useState([
-    "https://danielacb.com/",
-    "https://makereactapps.com/",
-  ]);
-  const [activeBrowser, setActiveBrowser] = useState(0);
+  function reducer(state, action) {
+    const { browsers, activeBrowser } = state;
+    const { type, payload } = action;
 
-  function chooseBrowser(id) {
-    setActiveBrowser(id);
+    if (type === "ADD") {
+      const newBrowsers = [...browsers, ""];
+      const activeBrowser = newBrowsers.length - 1;
+      return {
+        browsers: newBrowsers,
+        activeBrowser,
+      };
+    }
+    if (type === "CHOOSE") {
+      return {
+        ...state,
+        activeBrowser: payload,
+      };
+    }
+    if (type === "UPDATE") {
+      const newBrowsers = [...browsers];
+      newBrowsers[activeBrowser] = payload;
+      return {
+        ...state,
+        browsers: newBrowsers,
+      };
+    }
+    if (type === "CLOSE") {
+    }
   }
 
-  function addBrowser() {
-    const newBrowsers = [...browsers, ""];
-    setBrowsers(newBrowsers);
-    setActiveBrowser(newBrowsers.length - 1);
-  }
+  const [{ browsers, activeBrowser }, dispatch] = useReducer(reducer, {
+    browsers: ["https://danielacb.com/", "https://makereactapps.com/"],
+    activeBrowser: 0,
+  });
 
-  function updateBrowser(url) {
-    const newBrowsers = [...browsers];
-    newBrowsers[activeBrowser] = url;
-    setBrowsers(newBrowsers);
-  }
+  const chooseBrowser = (id) => dispatch({ type: "CHOOSE", payload: id });
+  const addBrowser = () => dispatch({ type: "ADD" });
+  const updateBrowser = (url) => dispatch({ type: "UPDATE", payload: url });
 
   const url = browsers[activeBrowser];
 
