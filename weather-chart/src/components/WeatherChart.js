@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Bar } from "react-chartjs-2";
 
 const options = {
@@ -42,28 +42,48 @@ const labels = [...Array(7)].map((_, i) => {
   return days[date.getDay()];
 });
 
+const apiUrl = `https://api.openweathermap.org/data/2.5/onecall?exclude=hourly,minutely&units=imperial&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`;
+
 export default function WeatherChart({ latLng }) {
-  console.log(latLng);
+  const [datasets, setDatasets] = useState([]);
+
+  useEffect(() => {
+    getWeatherData();
+
+    async function getWeatherData() {
+      const res = await fetch(`${apiUrl}&lat=${latLng.lat}&lon=${latLng.lng}`);
+      const data = await res.json();
+      const formattedData = formatWeatherData(data);
+      setDatasets(formattedData);
+    }
+
+    function formatWeatherData(data) {
+      return [
+        {
+          label: "Highs",
+          backgroundColor: "#EC9CAC",
+          borderColor: "#EC9CAC",
+          data: data.daily.map((day) => day.temp.max),
+        },
+        {
+          label: "Lows",
+          backgroundColor: "#9CCAF6",
+          borderColor: "#9CCAF6",
+          data: data.daily.map((day) => day.temp.min),
+        },
+      ];
+    }
+  }, [latLng]);
+
   return (
-    <Bar
-      options={options}
-      data={{
-        labels: labels,
-        datasets: [
-          {
-            label: "Highs",
-            data: [100, 200, 300, 234, 199, 302, 280],
-            backgroundColor: "#EC9CAC",
-            borderColor: "#EC9CAC",
-          },
-          {
-            label: "Lows",
-            data: [20, 80, 120, 80, 40, 90, 100],
-            backgroundColor: "#9CCAF6",
-            borderColor: "#9CCAF6",
-          },
-        ],
-      }}
-    />
+    <div className="chart">
+      <Bar
+        options={options}
+        data={{
+          labels,
+          datasets,
+        }}
+      />
+    </div>
   );
 }
