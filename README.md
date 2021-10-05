@@ -12,13 +12,13 @@ Apps created for the course: makereactapps.com
 - [x] 08 Authentication
 - [x] 09 Web Speech and Timers
 - [x] 10 Calendar Picker
-- [ ] 11 Animated Chat Box
-- [ ] 12 Multi-Step Form
-- [ ] 13 Memory Matching Game
-- [ ] 14 Drag and Drop Math Card
-- [ ] 15 Browser
-- [ ] 16 Real-Time Search
-- [ ] 17 Charting the Weather
+- [x] 11 Animated Chat Box
+- [x] 12 Multi-Step Form
+- [x] 13 Memory Matching Game
+- [x] 14 Drag and Drop Math Card
+- [x] 15 Browser
+- [x] 16 Real-Time Search
+- [x] 17 Charting the Weather
 - [ ] 18 Shopping Cart w/ Context + Reducer
 - [ ] 19 Typing Tester
 - [ ] 20 ?
