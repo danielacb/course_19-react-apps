@@ -1,9 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useCart } from "../contexts/useCart";
+
 import CartIcon from "../supermarket.svg";
+import Cart from "./Cart";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const cartModalRef = useRef(null);
+  const { cart } = useCart();
 
   function handleClick(e) {
     if (cartModalRef.current.contains(e.target)) return;
@@ -25,7 +29,7 @@ export default function Header() {
       <div className="container">
         <div className="cart-button">
           <button onClick={() => setIsOpen(!isOpen)}>
-            <img src={CartIcon} width="30" />({0})
+            <img src={CartIcon} width="30" />({cart.length})
           </button>
 
           <div
@@ -33,7 +37,7 @@ export default function Header() {
             style={{ display: isOpen ? "block" : "none" }}
             ref={cartModalRef}
           >
-            cart goes here
+            <Cart />
           </div>
         </div>
       </div>
