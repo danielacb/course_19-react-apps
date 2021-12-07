@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import "./App.css";
 
-const accessKey = process.env.REACT_APP_UNSPLASH_ACCESS_KEY;
+const accessKey = import.meta.env.VITE_APP_UNSPLASH_ACCESS_KEY;
 
 export default function App() {
   const [images, setImages] = useState([]);
