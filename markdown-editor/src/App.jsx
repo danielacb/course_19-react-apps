@@ -12,7 +12,7 @@ export default function App() {
   return (
     <div className="app">
       <textarea onChange={handleChange} placeholder={markdown} />
-      <ReactMarkdown className="preview" source={markdown} />
+      <ReactMarkdown className="preview">{markdown}</ReactMarkdown>
     </div>
   );
 }
