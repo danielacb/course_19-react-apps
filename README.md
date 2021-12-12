@@ -1,4 +1,4 @@
-# 20 React Apps
+# 19 React Apps
 
 Apps created for the course: makereactapps.com
 
