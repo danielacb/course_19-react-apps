@@ -1,6 +1,6 @@
 # Browser
 
-<div align="center" ><video src='https://res.cloudinary.com/betterdev/video/upload/q_auto,f_auto,w_620,h_350/v1633383234/14-browser_bnbowp_kjp0qr.mp4' width="400"/></div>
+<div align="center" ><video src='https://user-images.githubusercontent.com/18037904/145698838-712e47b9-6f44-4be7-81d5-2d4794b323ea.mp4' width="400"/></div>
 
 <br>
 

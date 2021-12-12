@@ -1,6 +1,6 @@
 # Moving Link Across a Canvas
 
-<div align="center" ><video src='https://res.cloudinary.com/betterdev/video/upload/q_auto,f_auto,w_620,h_350/v1633382865/05_-_link_moving_rb1qtu_fl0mk3.mp4' width="400"/></div>
+<div align="center" ><video src='https://user-images.githubusercontent.com/18037904/145698921-21c485c6-ee80-4b72-9bcd-b9e3f163a4c4.mp4' width="400"/></div>
 
 <br>
 

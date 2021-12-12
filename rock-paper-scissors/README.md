@@ -1,6 +1,6 @@
 # Paper Rock Scissors
 
-<div align="center" ><video src='https://res.cloudinary.com/betterdev/video/upload/q_auto,f_auto,w_620,h_350/v1633382849/04_-_rock_paper_scissors_oupoes_ev0qx5.mp4' width="400"/></div>
+<div align="center" ><video src='https://user-images.githubusercontent.com/18037904/145698920-c9815964-026e-4849-b36d-30242eca15b4.mp4' width="400"/></div>
 
 <br>
 

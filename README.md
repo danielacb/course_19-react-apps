@@ -13,7 +13,7 @@ Apps created for the course: makereactapps.com
 - [08 - Authentication](https://github.com/danielacb/course_20-react-apps/tree/main/authentication)
 - [09 - Web Speech and Timers](https://github.com/danielacb/course_20-react-apps/tree/main/web-speech-and-timers)
 - [10 - Calendar Picker](https://github.com/danielacb/course_20-react-apps/tree/main/calendar-picker)
-- [11 - Animated Chat Box]()
+- [11 - Animated Chat Box](https://github.com/danielacb/course_19-react-apps/tree/main/animated-chat-box)
 - [12 - Multi-Step Form](https://github.com/danielacb/course_20-react-apps/tree/main/multi-step-form)
 - [13 - Memory Matching Game](https://github.com/danielacb/course_20-react-apps/tree/main/memory-matching-game)
 - [14 - Drag and Drop Math Card](https://github.com/danielacb/course_20-react-apps/tree/main/drag-and-drop-math-card)

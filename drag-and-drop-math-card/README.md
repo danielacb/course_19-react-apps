@@ -1,6 +1,6 @@
 # Drag and Drop Math Card
 
-<div align="center" ><video src='https://res.cloudinary.com/betterdev/video/upload/q_auto,f_auto,w_620,h_350/v1633383208/08-math-cards_ybj27c_txgs4w.mp4' width="400"/></div>
+<div align="center" ><video src='https://user-images.githubusercontent.com/18037904/145698923-4d8d9e2c-cff4-4749-95b1-3b3831c849c6.mp4' width="400"/></div>
 
 <br>
 

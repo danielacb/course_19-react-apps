@@ -1,7 +1,7 @@
 # Calendar Picker
 
-<div align="center" ><video src='https://res.cloudinary.com/betterdev/video/upload/q_auto,f_auto,w_620,h_350/v1633382962/10_-_calendar-picker_oeeacl_ckd4rn.mp4' width="400"/></div>
+<div align="center" ><video src='https://user-images.githubusercontent.com/18037904/145698834-d43a06e2-ad4b-4ab4-be49-6b809b10faee.mp4' width="400"/></div>
 
 <br>
 
-A fantastic example at storing state and manuevering our UI and styles to match that state.
+Make your browser talk to you. Also another example with timers which makes us understand how React renders its components.

@@ -1,6 +1,6 @@
 # Trivia Game
 
-<div align="center" ><video src='https://res.cloudinary.com/betterdev/video/upload/q_auto,f_auto,w_620,h_350/v1633382907/07_-_trivia_s5dp85_axmgii.mp4' width="400"/></div>
+<div align="center" ><video src='https://user-images.githubusercontent.com/18037904/145698922-55f963f8-c1fb-4dae-a38d-39ca1c766f83.mp4' width="400"/></div>
 
 <br>
 

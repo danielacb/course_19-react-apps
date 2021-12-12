@@ -1,6 +1,6 @@
 # Memory Matching Game
 
-<div align="center" ><video src='https://res.cloudinary.com/betterdev/video/upload/q_auto,f_auto,w_620,h_350/v1633383171/13-memory-matching_cvgqvl_df4qrs.mp4' width="400"/></div>
+<div align="center" ><video src='https://user-images.githubusercontent.com/18037904/145698836-32768f6c-2b79-4e23-93a4-fe9191add0bb.mp4' width="400"/></div>
 
 <br>
 
